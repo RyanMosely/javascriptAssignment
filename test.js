@@ -1,3 +1,7 @@
+
+
+
+
 //PASSGEN VER 1
 
 
@@ -399,7 +403,7 @@ passGen(charTypes[0], charTypes[1], charTypes[2], charTypes[3]);
 
 //PASSGEN VER 5 (IF ELSE INSIDE IF ELSE)
 
-
+/*
 
 alert("Lets make a password! Please select if you want numbers, upper case letters, lower case letters, or special characters to be included in your generated password in the following windows.")
 
@@ -559,6 +563,7 @@ function copy(){
 
 };
 
+*/
 
 // DO WHILE LOOP EXAMPLE
 //----------------------------------
