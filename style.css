@@ -1,0 +1,61 @@
+body {
+    color: black;
+    background-color: #f9fbfd;
+}
+
+h1 {
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+
+header {
+    text-align: center;
+}
+
+textarea{
+    width:100%;
+    height: 134px;
+    text-align: center;
+    padding: 15px;
+    border: dashed lightgray;
+    border-width: 2px;
+    margin-top: -7px;
+    margin-bottom: -11px;
+}
+
+
+button {
+    border-radius: 33px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-right: 37px;
+    padding-left: 37px;
+    font-size: 21px;
+}
+
+.buttons {
+    text-align: center;
+   
+}
+
+#generate {
+    background-color: #af0807;
+    color: white;
+}
+
+#copy {
+    color: white;
+    background-color: #c0c7cf;
+}
+
+
+.shadow {
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,.15)!important;
+}
+
+::placeholder {
+    color: #858b90;
+}
+
+
+
