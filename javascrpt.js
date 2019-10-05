@@ -137,7 +137,7 @@ charTypes.push(spec);
 
 
 if(num===false&&up===false&&low===false&&spec===false){
-    alert("Please select at least one kind of character")
+    alert("Please refresh the broweser and select at least one type of character.")
     
 }
 else{
