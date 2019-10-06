@@ -1,32 +1,39 @@
 
+
+
+//This Alert Method gives instructions to the user for the next confirmation windows.
+
 alert("Lets make a password! Please select if you want numbers, upper case letters, lower case letters, or special characters to be included in your generated password in the following windows.")
 
 
 
 
-
-//BEGINNING OF MAIN IF ELSE --------------------------------------------
-
-
-//BEGINNING OF FUNCTION--------
+//BEGINNING OF FUNCTION(refer to variables below function for argument representation)-----------------------------------------------------------------------------------------
 
 function passGen(numb, upp, lowe, speci){
 
-//grabs a set amount of charcters and puts them into a variable
+//Grabs a set amount of charcters and puts them into a variable.
     var len = prompt("How long do you want your password to be? Please choose between 8-128 characters.")
 
-//object to store loop outputs
+
+
+//If 'len' is between 8-128 characters, it executes the following loop/code blocks.
+//Else it alerts the user to refresh the browser and to choose between 8-128 characters.  
 if(len>=8&&len<=128){
+
+//Variable representing an empty array to store loop outputs.
     var z= [];
     
-//loops for random numbers, uppercase, lower case, and special
 
 
-
+//Loops for random numbers, upper case letters, lower case letters, and special characters.
+//As the loop passes through each if/else statement, it iterates 'i' by 1.
+//Once 'i' === the conditional statement, javascript then jumps out of the loop.
     var i = 0;
 
     while(i<len){
-        
+
+//Conditional statement for numbers.
     if(numb === true){   
        { var numbers = "0123456789";
         var a = Math.floor(Math.random() * (numbers.length));
@@ -43,7 +50,7 @@ if(len>=8&&len<=128){
     console.log(false);
 }
 
-
+//Conditional statement for upper case letters.
 if(upp === true){
     {
         var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
@@ -60,7 +67,7 @@ if(upp === true){
     console.log(false);
     }
 
-
+//Conditional statement for lower case letters.
 if(lowe === true){    
     {
         var lowerCase = "abcdefghiklmnopqrstuvwxyz";
@@ -76,6 +83,7 @@ if(lowe === true){
     console.log(false);
 }
 
+//Conditional statement for special characters.
 if(speci === true){
     {
         var special = "#$%&'\"()*+,-./";
@@ -107,7 +115,7 @@ else{
 
     }
 
-//END OF FUNCTION--------------------------
+//END OF FUNCTION--------------------------------------------------------------------------------
 
 
    
@@ -116,18 +124,16 @@ else{
 
 
 
+//Each variable represents a confirmation on whether the user wants lower case letters, upper case letters, numbers, or special characters included in their generated password.
 
-//END OF MAIN IF/ELSE STATEMENT------------------------------------------------------------
 var num = confirm("Do you want numbers in your password?");
 var up = confirm("Do you want uppercase letters in your password?");
 var low = confirm("Do you want lowercase in your password?");
 var spec = confirm("Do you want special characters in your password?");
+
+
+//The boolean data type for each confirmation is then stored in the charTypes variable.
 var charTypes = [];
-
-
-
-
-
 
 charTypes.push(num);
 charTypes.push(up);
@@ -135,7 +141,8 @@ charTypes.push(low);
 charTypes.push(spec);
 
 
-
+//If the user doe not choose a charactrer type when prompted, they are then asked to refresh the browser and to choose at least one character type.
+//Else when they did choose at least one character type, the charTypes variable that represents the confirmation on character choices are then passed as arguments in the passGen() function.
 if(num===false&&up===false&&low===false&&spec===false){
     alert("Please refresh the broweser and select at least one type of character.")
     
@@ -149,7 +156,7 @@ function genClick(){
 }
 
 
-
+//Function that copies the generated password that is set in the textbox to the clipboard.
 function copy(){
     document.getElementById("password").select();
     document.execCommand("Copy");
